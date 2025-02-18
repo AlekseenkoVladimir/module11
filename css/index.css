@@ -31,9 +31,13 @@ button {
   text-decoration: none;
   display: inline-block;
   max-width: fit-content;
+  cursor: pointer;
+}
+button:active {
+  background-color: #104354;
 }
 
-input {
+input, select {
   margin: 5px 10px 5px 0;
   border: 0;
   padding: 0 10px;
@@ -45,6 +49,8 @@ input {
   background-color: #3cbc8d;
   color: white;
   max-width: 200px;
+  width: 100%;
+  height: 36px;
 }
 
 main {
