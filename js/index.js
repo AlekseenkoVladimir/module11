@@ -19,6 +19,70 @@ let fruitsJSON = `[
   {"kind": "Дуриан", "color": "зеленый", "weight": 35},
   {"kind": "Личи", "color": "розово-красный", "weight": 17},
   {"kind": "Карамбола", "color": "желтый", "weight": 28},
+  {"kind": "Мангустин", "color": "фиолетовый", "weight": 13},
+  {"kind": "Дуриан", "color": "зеленый", "weight": 35},
+  {"kind": "Личи", "color": "розово-красный", "weight": 17},
+  {"kind": "Карамбола", "color": "желтый", "weight": 28},
+  {"kind": "Мангустин", "color": "фиолетовый", "weight": 13},
+  {"kind": "Дуриан", "color": "зеленый", "weight": 35},
+  {"kind": "Личи", "color": "розово-красный", "weight": 17},
+  {"kind": "Карамбола", "color": "желтый", "weight": 28},
+  {"kind": "Мангустин", "color": "фиолетовый", "weight": 13},
+  {"kind": "Дуриан", "color": "зеленый", "weight": 35},
+  {"kind": "Личи", "color": "розово-красный", "weight": 17},
+  {"kind": "Карамбола", "color": "желтый", "weight": 28},
+  {"kind": "Мангустин", "color": "фиолетовый", "weight": 13},
+  {"kind": "Дуриан", "color": "зеленый", "weight": 35},
+  {"kind": "Личи", "color": "розово-красный", "weight": 17},
+  {"kind": "Карамбола", "color": "желтый", "weight": 28},
+  {"kind": "Мангустин", "color": "фиолетовый", "weight": 13},
+  {"kind": "Дуриан", "color": "зеленый", "weight": 35},
+  {"kind": "Личи", "color": "розово-красный", "weight": 17},
+  {"kind": "Карамбола", "color": "желтый", "weight": 28},
+  {"kind": "Мангустин", "color": "фиолетовый", "weight": 13},
+  {"kind": "Дуриан", "color": "зеленый", "weight": 35},
+  {"kind": "Личи", "color": "розово-красный", "weight": 17},
+  {"kind": "Карамбола", "color": "желтый", "weight": 28},
+  {"kind": "Мангустин", "color": "фиолетовый", "weight": 13},
+  {"kind": "Дуриан", "color": "зеленый", "weight": 35},
+  {"kind": "Личи", "color": "розово-красный", "weight": 17},
+  {"kind": "Карамбола", "color": "желтый", "weight": 28},
+  {"kind": "Мангустин", "color": "фиолетовый", "weight": 13},
+  {"kind": "Дуриан", "color": "зеленый", "weight": 35},
+  {"kind": "Личи", "color": "розово-красный", "weight": 17},
+  {"kind": "Карамбола", "color": "желтый", "weight": 28},
+  {"kind": "Мангустин", "color": "фиолетовый", "weight": 13},
+  {"kind": "Дуриан", "color": "зеленый", "weight": 35},
+  {"kind": "Личи", "color": "розово-красный", "weight": 17},
+  {"kind": "Карамбола", "color": "желтый", "weight": 28},
+  {"kind": "Мангустин", "color": "фиолетовый", "weight": 13},
+  {"kind": "Дуриан", "color": "зеленый", "weight": 35},
+  {"kind": "Личи", "color": "розово-красный", "weight": 17},
+  {"kind": "Карамбола", "color": "желтый", "weight": 28},
+  {"kind": "Мангустин", "color": "фиолетовый", "weight": 13},
+  {"kind": "Дуриан", "color": "зеленый", "weight": 35},
+  {"kind": "Личи", "color": "розово-красный", "weight": 17},
+  {"kind": "Карамбола", "color": "желтый", "weight": 28},
+  {"kind": "Мангустин", "color": "фиолетовый", "weight": 13},
+  {"kind": "Дуриан", "color": "зеленый", "weight": 35},
+  {"kind": "Личи", "color": "розово-красный", "weight": 17},
+  {"kind": "Карамбола", "color": "желтый", "weight": 28},
+  {"kind": "Мангустин", "color": "фиолетовый", "weight": 13},
+  {"kind": "Дуриан", "color": "зеленый", "weight": 35},
+  {"kind": "Личи", "color": "розово-красный", "weight": 17},
+  {"kind": "Карамбола", "color": "желтый", "weight": 28},
+  {"kind": "Мангустин", "color": "фиолетовый", "weight": 13},
+  {"kind": "Дуриан", "color": "зеленый", "weight": 35},
+  {"kind": "Личи", "color": "розово-красный", "weight": 17},
+  {"kind": "Карамбола", "color": "желтый", "weight": 28},
+  {"kind": "Мангустин", "color": "фиолетовый", "weight": 13},
+  {"kind": "Дуриан", "color": "зеленый", "weight": 35},
+  {"kind": "Личи", "color": "розово-красный", "weight": 17},
+  {"kind": "Карамбола", "color": "желтый", "weight": 28},
+  {"kind": "Мангустин", "color": "фиолетовый", "weight": 13},
+  {"kind": "Дуриан", "color": "зеленый", "weight": 35},
+  {"kind": "Личи", "color": "розово-красный", "weight": 17},
+  {"kind": "Карамбола", "color": "желтый", "weight": 28},
   {"kind": "Тамаринд", "color": "светло-коричневый", "weight": 22}
 ]`;
 
@@ -36,6 +100,20 @@ let colorsJSON = `[
 let allFruits = JSON.parse(fruitsJSON);
 let fruits = allFruits;
 let colors = JSON.parse(colorsJSON);
+
+// Вычисление минимального и макимального веса имеющихся фруктов
+
+function minMaxFruitWeight() {
+  let minW = allFruits[0].weight;
+  let maxW = allFruits[0].weight;
+
+  for (let i = 0; i < allFruits.length; i++) {
+    allFruits[i].weight < minW ? (minW = allFruits[i].weight) : minW;
+    allFruits[i].weight > maxW ? (maxW = allFruits[i].weight) : maxW;
+  }
+
+  return [minW, maxW];
+}
 
 /*** ОТОБРАЖЕНИЕ ***/
 
@@ -118,12 +196,9 @@ shuffleButton.addEventListener("click", () => {
 // фильтрация массива
 const filterFruits = () => {
   fruits = allFruits;
-  console.log(fruits);
-  
-  !minWeightInput.value ? (minWeightInput.value = 0) : minWeightInput.value;
-  !maxWeightInput.value
-    ? (maxWeightInput.value = 100000)
-    : maxWeightInput.value;
+  [minW, maxW] = minMaxFruitWeight();
+  !minWeightInput.value ? (minWeightInput.value = minW) : minWeightInput.value;
+  !maxWeightInput.value ? (maxWeightInput.value = maxW) : maxWeightInput.value;
   maxWeight = maxWeightInput.value;
   minWeight = minWeightInput.value;
   fruits = fruits.filter((item) => {
@@ -146,15 +221,50 @@ let sortTime = "-"; // инициализация состояния време�
 
 const comparationColor = (a, b) => {
   // TODO: допишите функцию сравнения двух элементов по цвету
+  const priority = [];
+  colors.forEach((e) => priority.push(e.colorName));
+  const priority_1 = priority.indexOf(a.color);
+  const priority_2 = priority.indexOf(b.color);
+  return priority_1 > priority_2;
 };
 
 const sortAPI = {
   bubbleSort(arr, comparation) {
     // TODO: допишите функцию сортировки пузырьком
+    const n = arr.length;
+    for (let i = 0; i < n - 1; i++) {
+      for (let j = 0; j < n - 1 - i; j++) {
+        if (comparation(arr[j], arr[j + 1])) {
+          let temp = arr[j + 1];
+          arr[j + 1] = arr[j];
+          arr[j] = temp;
+        }
+      }
+    }
   },
 
   quickSort(arr, comparation) {
     // TODO: допишите функцию быстрой сортировки
+    alert("Алгоритм быстрой сортировки немного не получился :(")
+  //   if (arr.length <= 1) {
+  //     return arr;
+  //   }
+  //   const pivot = arr[arr.length - 1];
+  //   const leftArr = [];
+  //   const rightArr = [];
+  //   for (let i = 0; i < arr.length - 1; i++) {
+  //     if (comparation(pivot, arr[i])) {
+  //       leftArr.push(arr[i]);
+  //     } else {
+  //       rightArr.push(arr[i]);
+  //     }
+  //   };
+
+  //  console.log([
+  //     ...this.quickSort(leftArr, comparation),
+  //     pivot,
+  //     ...this.quickSort(rightArr, comparation),
+  //   ]);
   },
 
   // выполняет сортировку и производит замер времени
@@ -172,6 +282,8 @@ sortTimeLabel.textContent = sortTime;
 
 sortChangeButton.addEventListener("click", () => {
   // TODO: переключать значение sortKind между 'bubbleSort' / 'quickSort'
+  sortKind = sortKind === "bubbleSort" ? "quickSort" : "bubbleSort";
+  sortKindLabel.textContent = sortKind;
 });
 
 sortActionButton.addEventListener("click", () => {
@@ -180,6 +292,7 @@ sortActionButton.addEventListener("click", () => {
   sortAPI.startSort(sort, fruits, comparationColor);
   display();
   // TODO: вывести в sortTimeLabel значение sortTime
+  sortTimeLabel.textContent = sortTime;
 });
 
 /*** ДОБАВИТЬ ФРУКТ ***/
